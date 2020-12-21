@@ -1,0 +1,19 @@
+body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+h1{
+    text-align: center;
+    background:rgba(175,238,238,0.4);
+}
+h2{
+    text-align: center;
+    background:rgba(224,255,255,0.6);
+}
+.hover a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,263 @@
+*{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 481px){
+    #nav-drawer{
+        display: none;
+    }
+    .introduction{
+        display: flex;
+    }
+    .introduction h1{
+        margin-left: 15em;
+    }
+    .Twitter{
+        width: 10%;
+    }
+    .GitHub{
+        width: 10%;
+    }
+    a.twitter{
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-decoration: none;
+    }
+    p.Twitter_LOGO{
+        text-align: center;
+        opacity: 0;
+        color: #4169e1
+    }
+    a.twitter:hover p.Twitter_LOGO{
+        opacity: 1;
+        transition: .5s;
+    }
+    a.github{
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-decoration: none;
+    }
+    p.Git_LOGO{
+        text-align: center;
+        opacity: 0;
+        color: black;
+    }
+    a.github:hover p.Git_LOGO{
+        opacity: 1;
+        transition: .5s;
+    }
+    a.twitter img{
+        width: 70%;
+        height: auto;
+    }
+    a.github img{
+        width: 70%;
+        height: auto;
+    }
+    .ajenda{
+        text-align: center;
+        font-size: 0;
+    }
+    .WorkImg{
+        display: inline-block;
+        position: relative;
+        width: calc(100%/3);
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .after{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        background:rgba(255,255,255,0.7);
+        margin: 0 auto;
+        opacity: 0;
+        transition: .5s;
+    }
+    .after h2{
+        font-size: 50px;
+        margin-top: 20%;
+        color: white;
+        background:rgba(0,0,0,0.8);
+    }
+    .WorkImg:hover .after{
+        opacity: 1;
+        transition: .5s;
+    }
+    .space{
+        height: 10em;
+    }
+    .MY_section{
+        margin-left: 1em;
+        margin-top: 5em;
+        border-left: solid 5px rgba(144,238,144,0.8);
+        border-radius: 4px;
+    }
+    .Image{
+        text-align: center;
+        font-size: 0;
+    }
+    .Portfolio_img{
+        display: inline-block;
+        position: relative;
+        width: calc(100%/3.1);
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .hover{
+        font-size: 20px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        background:rgba(255,255,255,0.7);
+        margin: 0 auto;
+        opacity: 0;
+        transition: .5s;
+    }
+    .hover h2{
+        margin-top: 20%;
+        color: white;
+        background:rgba(0,0,0,0.8);
+    }
+    .hover a{
+        text-decoration: none;
+    }
+    .Portfolio_img:hover .hover{
+        opacity: 1;
+    }
+    .MYNAME{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -7em;
+    }
+    .My_picture{
+        width: 30%;
+    }
+    .MYNAME img{
+        width: 80%;
+        height: auto;
+    }
+    #IN_Nhigh h1{
+        border-left: solid 5px rgba(144,238,144,0.8);
+        border-radius: 4px;
+        margin-left: 1em;
+    }
+    footer{
+        text-align: center;
+    }
+    .update h1{
+        font-size: 100px;
+        text-align: center;
+        color: black;
+    }
+}
+@media screen and (max-width: 480px){
+    #nav-drawer{
+        position: relative;
+    }
+    .nav-unshown{
+        display:none;
+    }
+    #nav-open {
+        display: inline-block;
+        width: 30px;
+        height: 22px;
+        vertical-align: middle;
+    }
+    #nav-open span, #nav-open span:before, #nav-open span:after {
+        position: absolute;
+        height: 3px;/*線の太さ*/
+        width: 25px;/*長さ*/
+        border-radius: 3px;
+        background: #afeeea;
+        display: block;
+        content: '';
+        cursor: pointer;
+      }
+      #nav-open span:before {
+        bottom: -8px;
+      }
+      #nav-open span:after {
+        bottom: -16px;
+      }
+      #nav-close {
+        display: none;/*はじめは隠しておく*/
+        position: fixed;
+        z-index: 99;
+        top: 0;/*全体に広がるように*/
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0;
+        transition: .3s ease-in-out;
+      }
+      
+      /*中身*/
+      #nav-content {
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;/*最前面に*/
+        width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+        max-width: 200px;/*最大幅（調整してください）*/
+        height: 100%;
+        background: #fff;/*背景色*/
+        transition: .3s ease-in-out;/*滑らかに表示*/
+        -webkit-transform: translateX(-105%);
+        transform: translateX(-105%);/*左に隠しておく*/
+      }
+      #nav-content li a{
+        list-style: none;
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 5rem;
+      }
+      
+      /*チェックが入ったらもろもろ表示*/
+      #nav-input:checked ~ #nav-close {
+        display: block;/*カバーを表示*/
+        opacity: .5;
+      }
+      
+      #nav-input:checked ~ #nav-content {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);/*中身を表示（右へスライド）*/
+        box-shadow: 6px 0 25px rgba(0,0,0,.15);
+      }
+    .introduction{
+        display: none;
+    }
+    .Image{
+        display: none;
+    }
+    .space{
+        display: none;
+    }
+    .MYNAME{
+        text-align: center;
+    }
+    .MYNAME img{
+        width: 60%;
+        margin: 0;
+    }
+    footer{
+        text-align: center;
+    }
+}
