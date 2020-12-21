@@ -4,15 +4,35 @@ body {
     margin-right: 0;
     margin-bottom: 0;
 }
-@media screen and(max-width:480px){
-    iframe.slide_img{
+@media screen and (max-width:480px){
+    .slide_img{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    h2.title{
+        width: 100%;
+    }
+}
+@media screen and (min-width:481px){
+    .more{
+        display: flex;
+        justify-content: center;
         width: 100%;
         height: auto;
     }
-}
-@media screen and(min-width:481px){
-    iframe.slide_img{
-        width: 30%;
-        height: auto;
+    .more_img{
+        text-align: center;
+        display: block;
+    }
+    .slide_img{
+        text-align: center;
+        width: 100%;
+        margin-right: 4em;
+    }
+    h2.title{
+        text-align: center;
+        width: 100%;
+        margin-right: 4em;
     }
 }
